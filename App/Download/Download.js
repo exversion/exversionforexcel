@@ -351,6 +351,7 @@ function set_hashes(dataset){
 			datasets = app.getDatasets(dataset);
 			datasets[dataset] = hashes;
 			app.setDatasets(datasets);
+			advance('#select_space','#complete');
         }
 	});	
 }
