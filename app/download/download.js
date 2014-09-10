@@ -1,5 +1,7 @@
 ﻿/// <reference path="../App.js" />
 /*global app*/
+
+var key = 'e3cd62cd7e';
 var dataset = '';
 var columns = [];
 var column_count = 0;
@@ -30,7 +32,7 @@ var row_order = [];
 		
 		$('#search_submit').click(function(){
 			var button = $(this).html();
-			$(this).html('<img src="../../images/ajax-loader.gif">');
+			$(this).html('<img src="../../Images/ajax-loader.gif">');
 				
 			//Grab input value
 			var q = $('#dataset_search').val();
@@ -64,7 +66,7 @@ var row_order = [];
 		
 		$('#filter_submit').click(function(){
 			var button = $(this).html();
-			$(this).html('<img src="../../images/ajax-loader.gif">');
+			$(this).html('<img src="../../Images/ajax-loader.gif">');
 			
 			if($('#create_branch').is(':checked')){
 				//Create a branch and change dataset value before going any further
