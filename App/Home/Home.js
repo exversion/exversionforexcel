@@ -14,7 +14,7 @@
 				//if there are unsynced changes show sync button
 				var changes = sessionStorage.getItem('exv-changes');
 				if(changes){
-					$('#work').append('<br><a href="../Sync/Sync.html" class="btn btn-warning btn-block"><i class="fa fa-retweet fa-lg"></i> Sync changes with Exversion</a>');	
+					$('#work').append('<br><a href="../sync/sync.html" class="btn btn-warning btn-block"><i class="fa fa-retweet fa-lg"></i> Sync changes with Exversion</a>');	
 				}
 				advance('#login','#work');
 				$('#logout').show();
@@ -25,7 +25,7 @@
 				var p = $('#login_password').val();
 			if(u && p){
 				var button = $(this).html();
-				$(this).html('<img src="../../Images/ajax-loader.gif">');
+				$(this).html('<img src="../../images/ajax-loader.gif">');
 				//Send Login Request
 				$.ajax({
 				type: 'POST',
@@ -68,7 +68,7 @@
 				else if(p == p_again){
 					//Send registration request
 					var button = $(this).html();
-				$(this).html('<img src="../../Images/ajax-loader.gif">');
+				$(this).html('<img src="../../images/ajax-loader.gif">');
 					$.ajax({
 				type: 'POST',
 				data: {'username':u,'password':p, 'confirm_password':p_again, 'email':e},

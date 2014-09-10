@@ -50,7 +50,7 @@ var metadata;
 			if(form_validation(metadata)){
 				//Send Request to Exversion
 				var button = $(this).html();
-				$(this).html('<img src="../../Images/ajax-loader.gif">');
+				$(this).html('<img src="../../images/ajax-loader.gif">');
 				$.ajax({
 				type: 'POST',
 				data: {"access_token":sessionStorage.getItem('exv-token'), "name":$('#create_name').val(), "description":$('#create_description').val(),"source_url":"N/A", "org":0,"source_author":"N/A","source_date":"N/A", "source_contact":"N/A", "private":($('#create_private').is(':checked') ? 1 : 0)},
@@ -78,7 +78,7 @@ var metadata;
 function send_data(metadata, data){
 	advance('#createSet', '#Sending');
 	var button = $(this).html();
-	$(this).html('<img src="../../Images/ajax-loader.gif">');
+	$(this).html('<img src="../../images/ajax-loader.gif">');
 	//Push data to exversion
 	$.ajax({
 		type: 'POST',
