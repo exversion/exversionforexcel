@@ -20,7 +20,7 @@
 				
 			if(d && u && s && d != 'Describe the data you need...'){
 				var button = $(this).html();
-				$(this).html('<img src="../../images/ajax-loader.gif">');
+				$(this).html('<img src="../../Images/ajax-loader.gif">');
 				//Send Login Request
 				$.ajax({
 				type: 'POST',

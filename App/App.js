@@ -129,7 +129,7 @@ var app = (function () {
 				sessionStorage.removeItem("exv-key");
 				sessionStorage.removeItem("exv-private");
 				//redirect back home
-				window.location = "../home/home.html";
+				window.location = "../Home/Home.html";
 			});
 		});
 		//}
