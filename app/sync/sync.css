@@ -1,0 +1,10 @@
+﻿/* Page-specific styling */
+body{
+	background-color: #fff;
+}
+
+#changes, #sync_edit_inner, sync_edit_item_inner, #syncing_off_sets{
+	white-space: pre;
+	max-height: 200px;
+	overflow: scroll;
+}

@@ -1,0 +1,37 @@
+﻿/* Page-specific styling */
+body{
+	background-color: #fff;
+}
+
+#search_results{
+	max-height: 200px;
+	overflow: scroll;
+}
+
+#preview{
+	white-space: pre;
+	max-height: 235px;
+	overflow: scroll;
+}
+
+.search_item{
+	background: #eee;
+	border-top: solid 1px #000;
+	border-left: solid 1px #000;
+	margin: 5px;
+	padding: 10px;
+}
+
+#filters_outer{
+	background: #ccc;
+	padding: 5px;
+}
+
+#filters_inner{
+	max-height: 150px;
+	overflow: scroll;
+}
+
+h1, h2, h3{
+	text-align: center;
+}
