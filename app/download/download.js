@@ -247,7 +247,7 @@ function checkSize(col, row, callback){
 	if(col < column_count || row < row_count){
 			app.showNotification('Selection is not big enough for all the data. Needs to be '+column_count+' columns by '+row_count+' rows');
 	}else if(col > column_count || row > row_count){
-			app.showNotification("Selection is too big for the data and the people who built Microsoft's API are morons. Needs to be "+column_count+" columns by "+row_count+" rows");
+			app.showNotification("Selection is too big for the data. Needs to be "+column_count+" columns by "+row_count+" rows");
 	}else{
 			grabData(dataset, writeData);
 	}
