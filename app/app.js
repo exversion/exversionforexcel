@@ -129,7 +129,7 @@ var app = (function () {
 				sessionStorage.removeItem("exv-key");
 				sessionStorage.removeItem("exv-private");
 				//redirect back home
-				window.location = "../Home/Home.html";
+				window.location = "../home/home.html";
 			});
 		});
 		//}
@@ -401,7 +401,7 @@ function look_for_change(dataset, keys,values){
 		app.setDatasets(datasets);
 		sessionStorage.setItem('exv-changes', JSON.stringify(changes));
 		sessionStorage.setItem('exv-added_rows',JSON.stringify(added_rows));
-		window.location = '../Sync/Sync.html';
+		window.location = '../sync/sync.html';
 }
 
 function remove_from_changes(dataset, changes, row_id){
