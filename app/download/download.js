@@ -1,5 +1,6 @@
 ﻿/// <reference path="../App.js" />
 /*global app*/
+var key = sessionStorage.getItem("exv-key");
 var dataset = '';
 var columns = [];
 var column_count = 0;
