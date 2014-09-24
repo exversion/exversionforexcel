@@ -4,11 +4,6 @@
 (function () {
 	'use strict';
 	
-	var load_scripts = ['https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js','https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js','../../scripts/base64.js','../app.js','home.js'];
-	for(var s in load_scripts){
-		loadScript(s);
-	}
-	
 	// The initialize function must be run each time a new page is loaded
 	Office.initialize = function (reason) {
 		$(document).ready(function () {
@@ -110,20 +105,6 @@
 		});
 	};
 })();
-
-function loadScript(script){
-	try{
-		var oHead = document.getElementById('head')[0];
-		var oScript = document.createElement('script');
-		oScript.type = 'text/javascript';
-		oScript.src = script;
-		oHead.appendChild(oScript);
-	}catch(e){
-		advance('#login','#error');
-		$('#jscript').html(script);
-		$('#jserror').html(e);
-	}
-}
 
 function validEmail(email){
 	var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
