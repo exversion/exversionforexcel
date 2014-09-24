@@ -4,16 +4,23 @@
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 	<title>Exversion Spreadsheet Sync</title>
-	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js" type="text/javascript"></script>
-	
-	<script>
-		window.onerror = function(e){
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<!--[if IE 9]>
+		<script>
 			$('#login').hide();
-			$('#error').show();
-			$('#jscript').html('');
-			$('#jserror').html(e);
+			$('#error_pane').show();
+		</script>
+		<![endif]-->
+	<script>
+	window.onerror = function(errorMsg, url, lineNumber){
+			console.log(url+' '+lineNumber);
+			$('#login').hide();
+			$('#error_pane').show();
+			$('#jscript').html(url);
+			$('#jserror').html(errorMsg);
 		}
 	</script>
+
 	<link href="../../content/office.css" rel="stylesheet" type="text/css" />
 	<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
 	<script src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js" type="text/javascript"></script>
@@ -49,12 +56,15 @@
 		<div id="error_pane" class="padding" style="display:none;">
 			<p><strong>Hello <span class="user_display">User</span>!</strong></p>
 			<p>We're sorry to inform you that script <span id="jsscript"></span> has failed to load correctly.</p>
+			<!--[if IE 9]>
+			<div>
+				<p>Looks like you may be using IE9. Microsoft's Office apps javascript library does not work correctly with IE9. Most likely o15apptofilemappingtable.js has failed. This script is autoloaded by the official Apps for Office library (office.js), which Microsoft hosts and maintains themselves. All Office Apps depend on office.js and despite multiple attempts to report this bug to Microsoft they continue to insist that we figure out some way to debug their technology, hosted remotely on their servers so that it works correctly with their own products.</p>
+				<p>If we can't do that, Microsoft says, then we need to make sure our app "degrades gracefully" ... but without the office.js library all this app can do is show you kitten gifs. So here we are, degrading gracefully.</p>
+				<center><img src="../../images/kitten.gif" width="200"></center>
+				<p>Please upgrade as soon as possible.</p>
+			</div>
+				<![endif]-->
 			<div class="well" id="jserror"></div>
-			<!--<p style="margin-top: 50px;">
-				<a target="_blank" href="https://go.microsoft.com/fwlink/?LinkId=276812">
-					Find more samples online...
-				</a>
-			</p>-->
 		</div>
 		
 		<div id="login" class="padding">
